@@ -13,7 +13,7 @@ export const forwardGeocode = async locationName => {
   try {
     const formattedLocationName = locationName.replace(/ /g, '+');
     const response = await axios.get(
-      `https://maps.googleapis.com/maps/api/geocode/json?address=${formattedLocationName}&key=AIzaSyAYv66f0VStGVrMlJsEQAvAG55r47y8YfA`,
+      `https://maps.googleapis.com/maps/api/geocode/json?address=${formattedLocationName}&key={key}`,
     );
 
     if (response.data.results[0]) {
